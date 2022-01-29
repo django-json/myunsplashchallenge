@@ -1,0 +1,50 @@
+:root {
+    --primary-font: 'Noto Sans', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+
+    /* Colors | Global */
+    --black-1: #333333;
+    --black-2: #4f4f4f;
+    --grey-1: #bdbdbd;
+    --grey-2: #a9a9a9;
+    --white: #ffffff;
+    --green: #3db46d;
+    --red: #eb5757;
+    --shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+
+    /* Font Sizes | Global */
+    --text-xl: 24px;
+    --text-lg: 18px;
+    --text-md: 16px;
+    --text-sm: 14px;
+    --text-xs: 10px;
+
+    /* Spacing | Global */
+    --space-unit: 1em;
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(1.1 * var(--space-unit));
+    --space-md: calc(2 * var(--space-unit));
+    --space-lg: calc(3 * var(--space-unit));
+    --space-xl: calc(6 * var(--space-unit));
+}
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primary-font);
+}
+
+.material-icons {
+    font-size: 23px;
+    color: var(--grey-1);
+}

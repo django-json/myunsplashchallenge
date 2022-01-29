@@ -1,0 +1,21 @@
+.delete-photo {
+    width: 620px;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 12px;
+    background-color: var(--white);
+}
+
+.delete-photo__title {
+    font-size: var(--text-xl);
+    color: var(--black-1);
+    margin-bottom: var(--space-sm);
+}
+
+.delete-photo__action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-photo > .input {
+    margin-bottom: var(--space-sm);
+}

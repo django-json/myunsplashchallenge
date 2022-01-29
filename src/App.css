@@ -1,0 +1,17 @@
+.App {
+    min-height: 100vh;
+    max-width: 100vw;
+    margin: var(--space-md) var(--space-xl);
+}
+
+@media (max-width: 991.98px) {
+    .App {
+        margin: var(--space-sm) var(--space-md);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .App {
+        margin: 10px;
+    }
+}

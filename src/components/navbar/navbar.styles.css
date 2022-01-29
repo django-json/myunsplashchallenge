@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.navbar__col {
+    display: flex;
+    width: 450px;
+}
+
+.navbar svg,
+.navbar .input {
+    display: inline-block;
+}
+
+.navbar svg {
+    align-self: center;
+    margin-right: var(--space-sm);
+}
+
+.navbar .input {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        display: block;
+    }
+
+    .navbar__col {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navbar .input {
+        flex: 0 1 auto;
+    }
+}

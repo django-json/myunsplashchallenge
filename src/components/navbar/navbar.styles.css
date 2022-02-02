@@ -1,7 +1,6 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--space-xl);
 }
 
 .navbar__col {
@@ -36,5 +35,9 @@
 
     .navbar .input {
         flex: 0 1 auto;
+    }
+
+    .navbar > .btn {
+        margin-top: var(--space-lg);
     }
 }

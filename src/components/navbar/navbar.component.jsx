@@ -18,7 +18,7 @@ function Navbar() {
                     borderColor="grey"
                 />
             </div>
-            <Button text="Add a photo" variant="success" color="white" />
+                <Button text="Add a photo" variant="success" color="white" />
         </div>
     );
 }

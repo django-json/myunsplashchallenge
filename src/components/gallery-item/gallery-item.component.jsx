@@ -1,30 +1,50 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
+import Modal from 'react-modal';
 
 import './gallery-item.styles.css';
 
 import Button from '../button/button.component';
+import DeletePhoto from '../delete-photo/delete-photo.component';
 
-function GalleryItem() {
+Modal.setAppElement('#root');
+
+function GalleryItem({ id, label, photoURL, deletePhoto }) {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    function closeModal() {
+        setModalIsOpen(false);
+    }
+
     return (
-        <div className="gallery__item">
-            <img
-                src="https://res.cloudinary.com/jhanrisner/image/upload/v1643103262/m3uporhffbhklzzkmba6.png"
-                alt=""
-            />
-            <div className="overlay">
-                <Button
-                    text="delete"
-                    type="button"
-                    variant="outline-danger"
-                    color="red"
-                    bgColor="transparent"
-                    size="sm"
-                />
-                <div className="gallery__title">
-                    Morbi consequat lectus non orci maximus
+        <Fragment>
+            <div className="gallery-item">
+                <img src={photoURL} alt={label} />
+                <div className="overlay">
+                    <Button
+                        text="delete"
+                        type="button"
+                        variant="outline-danger"
+                        color="red"
+                        bgColor="transparent"
+                        size="sm"
+                        onClick={() => setModalIsOpen(true)}
+                    />
+                    <div className="gallery__title">{label}</div>
                 </div>
             </div>
-        </div>
+            <Modal
+                className="gallery-item__modal"
+                overlayClassName="gallery-item__modal--overlay"
+                isOpen={modalIsOpen}
+                contentLabel="gallery-item Collapsible Modal"
+            >
+                <DeletePhoto
+                    id={id}
+                    handleCancelClick={closeModal}
+                    deletePhoto={deletePhoto}
+                />
+            </Modal>
+        </Fragment>
     );
 }
 

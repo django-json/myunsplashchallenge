@@ -1,6 +1,7 @@
 .add-photo {
     width: 620px;
     padding: var(--space-sm) var(--space-md);
+    margin: auto var(--space-sm);
     border-radius: 12px;
     background-color: var(--white);
 }
@@ -14,6 +15,10 @@
 .add-photo__action {
     display: flex;
     justify-content: flex-end;
+}
+
+.add-photo__cancel:hover {
+    color: var(--red);
 }
 
 .add-photo > .input {

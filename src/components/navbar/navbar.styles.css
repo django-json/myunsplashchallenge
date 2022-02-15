@@ -22,6 +22,28 @@
     flex: 1 1 auto;
 }
 
+/* Modal Layout Styles */
+.navbar__modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__modal--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(79, 79, 79, 0.4);
+    overflow: none;
+}
+
 @media (max-width: 767.98px) {
     .navbar {
         display: block;
@@ -38,6 +60,8 @@
     }
 
     .navbar > .btn {
+        font-size: var(--text-sm);
+        padding: var(--space-sm);
         margin-top: var(--space-lg);
     }
 }

@@ -1,4 +1,5 @@
 .btn {
+    display: inline-block;
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 16px;
@@ -7,6 +8,7 @@
     border-radius: 12px;
     cursor: pointer;
     box-shadow: var(--shadow);
+    background-color: var(--white);
 }
 
 .btn:hover {
@@ -35,6 +37,15 @@
     box-shadow: none;
 }
 
+.btn--outline-danger {
+    border: 1px solid var(--red);
+}
+
+/* Size */
+.btn--sm {
+    padding: var(--space-xs) var(--space-sm);
+}
+
 /* Colors */
 .btn--grey {
     color: var(--grey-1);
@@ -42,4 +53,13 @@
 
 .btn--white {
     color: var(--white);
+}
+
+.btn--red {
+    color: var(--red);
+}
+
+/* Background Color */
+.btn--bg-transparent {
+    background-color: transparent;
 }

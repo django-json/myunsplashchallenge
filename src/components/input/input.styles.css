@@ -29,15 +29,13 @@
     padding: var(--space-sm);
     border: 1px solid var(--black-2);
     border-radius: 12px;
-    outline-color: var(--green);
+    outline: none;
+    text-overflow: ellipsis;
 }
 
-.input__input::placeholder {
-    color: var(--grey-1);
-}
-
-.input__input:focus + .material-icons {
-    color: var(--green);
+.input__helper-text {
+    margin: 2px 0;
+    font-size: var(--text-sm);
 }
 
 .input__input--left-padding {
@@ -46,4 +44,46 @@
 
 .input__input--border-grey {
     border-color: var(--grey-1);
+}
+
+/* Order */
+.input__input {
+    order: 2;
+}
+
+.input__label {
+    order: 1;
+}
+
+.input__helper-text {
+    order: 3;
+}
+
+/* Selectors */
+.input__input:focus {
+    border: 2px solid var(--green);
+}
+
+.input__input::placeholder {
+    color: var(--grey-1);
+}
+
+.input__input:focus ~ .input__label,
+.input__input:focus ~ .material-icons {
+    color: var(--green);
+}
+
+/* Error | Border Color */
+.input__input--error,
+.input__input--error:focus {
+    border-color: var(--red);
+}
+
+/* Error | Label, Icon, Helper text Color */
+.input__input--error ~ .input__helper-text,
+.input__input--error ~ .input__start-icon,
+.input__input--error:focus ~ .input__start-icon,
+.input__input--error ~ .input__label,
+.input__input--error:focus ~ .input__label {
+    color: var(--red);
 }

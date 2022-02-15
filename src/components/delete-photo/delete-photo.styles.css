@@ -19,3 +19,7 @@
 .delete-photo > .input {
     margin-bottom: var(--space-sm);
 }
+
+.delete-photo__cancel:hover {
+    color: var(--green);
+}

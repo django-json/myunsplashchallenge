@@ -27,8 +27,8 @@ function Gallery({ data, deletePhoto }) {
                 {data.map((item) => {
                     return (
                         <GalleryItem
-                            key={item.id}
-                            id={item.id}
+                            key={item._id}
+                            id={item._id}
                             label={item.label}
                             photoURL={item.photoURL}
                             deletePhoto={deletePhoto}

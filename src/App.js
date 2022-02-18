@@ -5,7 +5,6 @@ import './App.css';
 import Navbar from './components/navbar/navbar.component';
 import Gallery from './components/gallery/gallery.component';
 import Footer from './components/footer/footer.components';
-import Input from './components/input/input.component';
 
 import { validateAddPhotoForm } from './utils/utils';
 
@@ -14,28 +13,44 @@ function App() {
     const [label, setLabel] = useState('');
     const [photoURL, setPhotoURL] = useState('');
     const [searchValue, setSearchValue] = useState('');
-    // const [password, setPassword] = useState('');
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [errorMessage, setErrorMessage] = useState({
         label: [],
         photoURL: []
     });
 
+    useEffect(() => {
+        getPhotos();
+    }, []);
+
     function closeModal() {
         setModalIsOpen(false);
+        clearErrors();
     }
-
-    // useEffect(() => {
-    //     if (errorMessage) {
-    //         console.log(errorMessage);
-    //     }
-    // }, [errorMessage]);
 
     function addPhoto(label, photoURL) {
         const errors = validateAddPhotoForm(label, photoURL);
 
         if (!errors) {
-            setData([...data, { id: Date.now(), label, photoURL }]);
+            fetch('http://localhost:3001/photo/add', {
+                method: 'POST',
+                body: JSON.stringify({
+                    label,
+                    photoURL
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.acknowledged) {
+                        getPhotos();
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
 
             clearFormStates();
             // clear existing error before successful submission
@@ -48,6 +63,50 @@ function App() {
         }
     }
 
+    function deletePhoto(id) {
+        fetch(`http://localhost:3001/photo/${id}`, {
+            method: 'DELETE'
+        })
+            .then((res) => res.json())
+            .then(async (data) => {
+                if (data.acknowledged) {
+                    const updatedData = await filterData(id);
+                    setData(updatedData);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        closeModal();
+    }
+
+    // Filter the original data
+    function filterData(id) {
+        const filteredData = data.filter((item) => item._id !== id);
+        return filteredData;
+    }
+
+    // Search filter data but preserve the original copy of the data
+    function searchFilterData() {
+        const filteredData = data.filter((item) =>
+            item.label.toLowerCase().includes(searchValue.toLowerCase())
+        );
+
+        return filteredData;
+    }
+
+    function getPhotos() {
+        fetch('http://localhost:3001/photos')
+            .then((res) => res.json())
+            .then((data) => {
+                setData(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     function clearErrors() {
         setErrorMessage({
             label: [],
@@ -58,11 +117,6 @@ function App() {
     function clearFormStates() {
         setLabel('');
         setPhotoURL('');
-    }
-
-    function deletePhoto(id) {
-        const filteredData = data.filter((item) => item.id !== id);
-        setData(filteredData);
     }
 
     function handleChange(e) {
@@ -79,20 +133,9 @@ function App() {
             case 'photo-url':
                 setPhotoURL(inputValue);
                 break;
-            // case 'password':
-            //     setPassword(inputValue);
-            //     break;
             default:
                 break;
         }
-    }
-
-    function filterData() {
-        const filteredData = data.filter((item) =>
-            item.label.toLowerCase().includes(searchValue.toLowerCase())
-        );
-
-        return filteredData;
     }
 
     return (
@@ -108,14 +151,8 @@ function App() {
                 modalIsOpen={modalIsOpen}
                 errorMessage={errorMessage}
             />
-            <Gallery data={filterData()} deletePhoto={deletePhoto} />
+            <Gallery data={searchFilterData()} deletePhoto={deletePhoto} />
             <Footer />
-            {/* <Input
-                label="label"
-                startIcon="search"
-                helperText="something..."
-                error={false}
-            /> */}
         </div>
     );
 }

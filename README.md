@@ -84,6 +84,10 @@ $ npm start
 -   [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 -   [Node.js](https://nodejs.org/)
 -   [Validating a React form upon submit](https://goshacmd.com/submit-time-validation-react/)
+-   [Handling any POST data in Express](https://codex.so/handling-any-post-data-in-express)
+-   [DELETE Request using Fetch in Javascript](https://codezup.com/delete-request-using-fetch-in-javascript/)
+-   [Get and Post method using Fetch API](https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/#:~:text=Fetch%20also%20supports%20the%20POST,post%20content%20with%20an%20ID.)
+-   [How to Use MERN Stack: A Complete Guide](https://www.mongodb.com/languages/mern-stack-tutorial)
 
 ## Contact
 

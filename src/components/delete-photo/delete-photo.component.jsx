@@ -3,13 +3,11 @@ import React from 'react';
 import './delete-photo.styles.css';
 
 import Button from '../button/button.component';
-// import Input from '../input/input.component';
 
 function DeletePhoto({ id, handleCancelClick, deletePhoto }) {
     return (
         <div className="delete-photo">
             <div className="delete-photo__title">Are you sure?</div>
-            {/* <Input type="password" label="Password" /> */}
             <div className="delete-photo__action">
                 <Button
                     className="delete-photo__cancel"

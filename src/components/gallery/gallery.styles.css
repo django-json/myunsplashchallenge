@@ -32,4 +32,9 @@
         margin-top: var(--space-md);
         margin-bottom: var(--space-md);
     }
+
+    .gallery__not-available {
+        font-size: var(--text-sm);
+        margin-top: var(--space-xl);
+    }
 }

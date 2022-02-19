@@ -1,4 +1,5 @@
 <!-- Please update value in the {}  -->
+
 Under Construction...
 
 <h1 align="center">My Unsplash Challenge</h1>
@@ -38,28 +39,45 @@ Under Construction...
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![myunsplash-screenshot1](https://user-images.githubusercontent.com/44185999/154792469-992c7d32-305d-4c05-85df-54919ad1dcd4.png)
+![myunsplash-screenshot2](https://user-images.githubusercontent.com/44185999/154792474-e3a5216b-1cf2-42c0-b550-e6ec5edbfd43.png)
+![myunsplash-screenshot3](https://user-images.githubusercontent.com/44185999/154792477-19e5dbd9-dc08-49f3-9577-055e557521e8.png)
+![myunsplash-screenshot4](https://user-images.githubusercontent.com/44185999/154792481-1b4c9fa6-d075-4b2a-9285-b818dd070ccb.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
--   Where can I see your demo?
--   What was your experience?
--   What have you learned/improved?
--   Your wisdom? :)
+-   You can check the demo [here](https://myunsplashchallenge.netlify.app)
+-   This challenge is awesome! First of all, the masonry layout is the one that peaked my interest the most since this is the first time I do masonry design. For the backend, this is also my first time to use MongoDB for data storage and I never knew that MongoDB structure their data like in JSON format which is easy for me to understand though I need to learn new terms and syntaxes to manipulate the data itself but it was worth it as I enjoyed learning it.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
+Frontend:
+
 -   [React](https://reactjs.org/)
--   [Vue.js](https://vuejs.org/)
--   [Tailwind](https://tailwindcss.com/)
+-   [classnames](https://www.npmjs.com/package/classnames)
+-   [react-masonry-css](https://www.npmjs.com/package/react-masonry-css)
+-   [react-modal](https://www.npmjs.com/package/react-modal)
+
+Backend:
+
+-   [Express](https://www.npmjs.com/package/express)
+-   [MongoDB](https://www.npmjs.com/package/mongodb)
+-   [Multer](https://www.npmjs.com/package/multer)
+-   [Helmet](https://www.npmjs.com/package/helmet)
+-   [Compression](https://www.npmjs.com/package/compression)
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP) was to build an application to complete the given user stories:
+
+-   [x] User story: I can see a list of photos in the masonry layout that I have added
+-   [x] User story: I can add a new photo to the list - the new photo should be on top of the list
+-   [x] User story: I can search for photos by label
+-   [x] User story: When I hover a photo, I can see a label and a delete button
+-   [x] User story: I can delete images
+-   [N/A] User story (optional): When I delete an image, I can enter my password
 
 ## How To Use
 
@@ -69,7 +87,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/django-json/myunsplashchallenge
 
 # Install dependencies
 $ npm install
@@ -88,10 +106,9 @@ $ npm start
 -   [Handling any POST data in Express](https://codex.so/handling-any-post-data-in-express)
 -   [DELETE Request using Fetch in Javascript](https://codezup.com/delete-request-using-fetch-in-javascript/)
 -   [Get and Post method using Fetch API](https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/#:~:text=Fetch%20also%20supports%20the%20POST,post%20content%20with%20an%20ID.)
+-   [Getting ReplicaSetNoPrimary and MongoServerSelectionError error while connecting MongoDB with nodejs](https://stackoverflow.com/questions/60063820/getting-replicasetnoprimary-and-mongoserverselectionerror-error-while-connecting)
 -   [How to Use MERN Stack: A Complete Guide](https://www.mongodb.com/languages/mern-stack-tutorial)
 
 ## Contact
 
--   Website [your-website.com](https://{your-web-site-link})
--   GitHub [@your-username](https://{github.com/your-usermame})
--   Twitter [@your-twitter](https://{twitter.com/your-username})
+-   GitHub [@django-json](https://github.com/django-json)

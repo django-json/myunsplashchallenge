@@ -45,7 +45,11 @@ Under Construction...
 ![myunsplash-screenshot4](https://user-images.githubusercontent.com/44185999/154792481-1b4c9fa6-d075-4b2a-9285-b818dd070ccb.png)
 
 -   You can check the demo [here](https://myunsplashchallenge.netlify.app)
--   This challenge is awesome! First of all, the masonry layout is the one that peaked my interest the most since this is the first time I do masonry design. For the backend, this is also my first time to use MongoDB for data storage and I never knew that MongoDB structure their data like in JSON format which is easy for me to understand though I need to learn new terms and syntaxes to manipulate the data itself but it was worth it as I enjoyed learning it.
+-   This challenge is awesome! First of all, the masonry layout is the one that peaked my interest the most since this is the first time I do masonry design.
+
+-   For the backend, this is also my first time to use MongoDB for data storage and I never knew that MongoDB structure their data like in JSON format which is easy for me to understand though I need to learn new terms and syntaxes to manipulate the data itself but it was worth it as I enjoyed learning it.
+
+-   When I try to deploy the backend server to Vercel, I encountered errors and it took so much time and figure out that the implementation of MongoDB on Vercel is currently in development because the last implementation was deprecated so I migrated to Heroku instead and the problem was solved.
 
 ### Built With
 
@@ -65,6 +69,7 @@ Backend:
 -   [Multer](https://www.npmjs.com/package/multer)
 -   [Helmet](https://www.npmjs.com/package/helmet)
 -   [Compression](https://www.npmjs.com/package/compression)
+-   [Express Validator](https://www.npmjs.com/package/express-validator)
 
 ## Features
 
@@ -108,6 +113,7 @@ $ npm start
 -   [Get and Post method using Fetch API](https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/#:~:text=Fetch%20also%20supports%20the%20POST,post%20content%20with%20an%20ID.)
 -   [Getting ReplicaSetNoPrimary and MongoServerSelectionError error while connecting MongoDB with nodejs](https://stackoverflow.com/questions/60063820/getting-replicasetnoprimary-and-mongoserverselectionerror-error-while-connecting)
 -   [How to Use MERN Stack: A Complete Guide](https://www.mongodb.com/languages/mern-stack-tutorial)
+-   [Express Validator - Sanitation](https://express-validator.github.io/docs/sanitization.html)
 
 ## Contact
 

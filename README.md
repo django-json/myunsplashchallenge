@@ -42,8 +42,8 @@
 ![myunsplash-screenshot3](https://user-images.githubusercontent.com/44185999/154792477-19e5dbd9-dc08-49f3-9577-055e557521e8.png)
 ![myunsplash-screenshot4](https://user-images.githubusercontent.com/44185999/154792481-1b4c9fa6-d075-4b2a-9285-b818dd070ccb.png)
 
--   You can check the demo [here](https://myunsplashchallenge.netlify.app)
--   For the backend server source code, check [here](https://github.com/django-json/myunsplashchallenge-api)
+-   You can check the demo [here](https://myunsplashchallenge.netlify.app).
+-   For the backend server source code, check [here](https://github.com/django-json/myunsplashchallenge-api).
 -   This challenge is awesome! First of all, the masonry layout is the one that peaked my interest the most since this is the first time I do masonry design.
 
 -   For the backend, this is also my first time to use MongoDB for data storage and I never knew that MongoDB structure their data like in JSON format which is easy for me to understand though I need to learn new terms and syntaxes to manipulate the data itself but it was worth it as I enjoyed learning it.

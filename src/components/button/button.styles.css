@@ -20,7 +20,8 @@
     background-color: var(--green);
 }
 
-.btn--success:hover {
+.btn--success:hover,
+.btn--success:focus {
     background-color: #2f8e55;
 }
 
@@ -28,7 +29,8 @@
     background-color: var(--red);
 }
 
-.btn--danger:hover {
+.btn--danger:hover,
+.btn--danger:focus {
     background-color: #d01e1e;
 }
 

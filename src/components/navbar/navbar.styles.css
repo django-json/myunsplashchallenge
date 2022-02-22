@@ -1,10 +1,10 @@
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .navbar__col {
-    display: flex;
     width: 450px;
 }
 

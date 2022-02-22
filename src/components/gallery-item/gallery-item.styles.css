@@ -17,6 +17,10 @@
     transition: 0.3s;
 }
 
+.gallery-item .gallery__title {
+    word-wrap: break-word;
+}
+
 .gallery-item > .overlay:hover {
     opacity: 1;
 }

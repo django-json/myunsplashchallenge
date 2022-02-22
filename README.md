@@ -47,7 +47,7 @@
 
 -   For the backend, this is also my first time to use MongoDB for data storage and I never knew that MongoDB structure their data like in JSON format which is easy for me to understand though I need to learn new terms and syntaxes to manipulate the data itself but it was worth it as I enjoyed learning it.
 
--   When I try to deploy the backend server to Vercel, I encountered errors and it took so much time and figure out that the implementation of MongoDB on Vercel is currently in development because the last implementation was deprecated so I migrated to Heroku instead and the problem was solved.
+-   When I try to deploy the backend server to Vercel, I encountered errors and it took so much time and figured out that the implementation of MongoDB on Vercel is currently in development because the last implementation was deprecated so I migrated to Heroku instead and the problem was solved.
 
 ### Built With
 

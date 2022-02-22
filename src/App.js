@@ -32,7 +32,7 @@ function App() {
         const errors = validateAddPhotoForm(label, photoURL);
 
         if (!errors) {
-            fetch('http://localhost:3001/photo/add', {
+            fetch('https://myunsplashchallenge-api.herokuapp.com/photo/add', {
                 method: 'POST',
                 body: JSON.stringify({
                     label,
@@ -64,7 +64,7 @@ function App() {
     }
 
     function deletePhoto(id) {
-        fetch(`http://localhost:3001/photo/${id}`, {
+        fetch(`https://myunsplashchallenge-api.herokuapp.com/photo/${id}`, {
             method: 'DELETE'
         })
             .then((res) => res.json())
@@ -97,7 +97,7 @@ function App() {
     }
 
     function getPhotos() {
-        fetch('http://localhost:3001/photos')
+        fetch('https://myunsplashchallenge-api.herokuapp.com/photos')
             .then((res) => res.json())
             .then((data) => {
                 setData(data);

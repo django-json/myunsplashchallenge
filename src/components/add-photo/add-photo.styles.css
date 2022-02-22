@@ -24,3 +24,9 @@
 .add-photo > .input {
     margin-bottom: var(--space-sm);
 }
+
+@media (max-width: 768.98px) {
+    .add-photo {
+        padding: var(--space-sm);
+    }
+}

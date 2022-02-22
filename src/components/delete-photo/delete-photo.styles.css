@@ -24,3 +24,9 @@
 .delete-photo__cancel:hover {
     color: var(--green);
 }
+
+@media (max-width: 768.98px) {
+    .delete-photo {
+        padding: var(--space-sm);
+    }
+}

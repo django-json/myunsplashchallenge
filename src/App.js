@@ -6,7 +6,7 @@ import Navbar from './components/navbar/navbar.component';
 import Gallery from './components/gallery/gallery.component';
 import Footer from './components/footer/footer.components';
 
-import { validateAddPhotoForm } from './utils/utils';
+import { fetchWithRetry, validateAddPhotoForm } from './utils/utils';
 
 function App() {
     const [data, setData] = useState([]);
@@ -97,13 +97,16 @@ function App() {
     }
 
     function getPhotos() {
-        fetch('https://myunsplashchallenge-api.onrender.com/photos')
+        fetchWithRetry(
+            'https://myunsplashchallenge-api.onrender.com/photos',
+            {
+                method: 'GET'
+            },
+            3
+        )
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
-            })
-            .catch((error) => {
-                console.log(error);
             });
     }
 

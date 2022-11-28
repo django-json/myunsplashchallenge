@@ -48,3 +48,17 @@ export function isEmpty(obj) {
         Object.getPrototypeOf(obj) === Object.prototype
     );
 }
+
+export function fetchWithRetry(url, options = {}, retries) {
+    return fetch(url, options)
+        .then((res) => {
+            if (res.ok) {
+                return res;
+            }
+
+            if (retries > 0) {
+                return fetchWithRetry(url, options, retries--);
+            }
+        })
+        .catch((error) => console.error(error));
+}
